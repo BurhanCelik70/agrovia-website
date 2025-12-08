@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrivia - Yapay Zeka Destekli Tarım Danışmanlığı</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Agrivia</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#hero">Ana Sayfa</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#how-it-works">Çalışma Şeklimiz</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact" class="nav-cta">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+
+          <p class="badge">Yeni Nesil Yapay Zeka Destekli Tarım Danışmanlığı</p>
+
+          <h1>
+            Toprağın bilgeliğini <span class="gradient-text">yapay zekayla</span> birleştiriyoruz.
+          </h1>
+
+          <p class="hero-subtitle">
+            Agrivia, yıllardır sahada çalışan çiftçilerin deneyimleri ile veri bilimini bir araya getiren
+            modern bir tarım teknoloji girişimidir. Amacımız; üreticilere doğru zamanda doğru kararı
+            verdirecek analizler sunarak, verimliliği her yıl daha yukarı taşımaktır.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Ücretsiz Görüşme Planla</a>
+            <button class="btn-ghost" id="open-chat-from-hero">
+              Agrivia AI Asistanı ile Deneme Yap
+            </button>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value">+28%</span>
+              <span class="metric-label">Ortalama verim artışı</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">3x</span>
+              <span class="metric-label">Daha hızlı karar alma</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">24/7</span>
+              <span class="metric-label">AI destekli danışmanlık</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO PANEL -->
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span class="status-dot"></span>
+            <span>Agrivia AI Tarım Asistanı</span>
+          </div>
+
+          <div class="panel-body">
+            <div class="chat-bubble ai">
+              Merhaba! Tarlanla ilgili kısa bilgi verirsen, sana verim ve maliyet açısından en iyi planı öneririm.
+            </div>
+            <div class="chat-bubble user">
+              120 dönüm buğday ekili. Su maliyetleri arttı, ne yapmalıyım?
+            </div>
+            <div class="chat-bubble ai">
+              İlk önerim: Sulama zamanlamasını sensör verilerine göre optimize edelim. %12'e kadar su tasarrufu mümkün.
+            </div>
+          </div>
+
+          <div class="panel-input">
+            <input type="text" placeholder="Örn. 'Mısırda verimi artırmak istiyorum'" disabled />
+            <button disabled>Yakında</button>
+          </div>
+
+          <p class="panel-note">Bu alan prototiptir — henüz gerçek veri bağlantısı yok.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HİZMETLER -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Neler Sunuyoruz?</h2>
+        <p class="section-subtitle">
+          Tarladan çıkan her bilgi, daha iyi bir üretimin kapısını aralar. Agrivia bu bilgiyi anlamlandırır.
+        </p>
+
+        <div class="grid-3">
+
+          <div class="card">
+            <h3>AI Destekli Ürün Tavsiyesi</h3>
+            <p>İklim, toprak analizi ve pazar fiyat tahminlerini bir araya getirerek doğru ürün seçimleri yapmanızı sağlarız.</p>
+            <ul>
+              <li>Toprak uygunluk raporu</li>
+              <li>Yıllık verim tahmini</li>
+              <li>Risk analizi</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Akıllı Sulama & Gübreleme</h3>
+            <p>Su ve gübre kullanımını optimize eden analizler ile maliyetleri düşürür, verimi artırırız.</p>
+            <ul>
+              <li>Zamanlama önerileri</li>
+              <li>İsrafı azaltan otomasyon planı</li>
+              <li>Gerçek zamanlı takip</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Veri Tabanlı Üretim Planı</h3>
+            <p>Geçmiş veriler, hava durumu, verim tahminleri ve piyasa analizleri ile geleceğe hazır bir plan oluştururuz.</p>
+            <ul>
+              <li>Sezon planlama</li>
+              <li>Maliyet & kâr simülasyonu</li>
+              <li>Otomatik uyarı sistemi</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NASIL ÇALIŞIR -->
+    <section id="how-it-works" class="section section-alt">
+      <div class="container">
+        <h2>Agrivia nasıl çalışır?</h2>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Keşif</h3>
+            <p>Tarlan, ürünlerin, hedeflerin ve sorunların hakkında bilgi alırız.</p>
+          </div>
+
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Analiz</h3>
+            <p>Tarım verileri + hava tahmini + geçmiş sonuçlar → AI tarafından analiz edilir.</p>
+          </div>
+
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Öneri & Plan</h3>
+            <p>Sana daha yüksek verim ve daha düşük maliyet için 30-60-90 günlük plan sunarız.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HAKKIMIZDA -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+
+        <div>
+          <h2>Agrivia'nın Hikâyesi</h2>
+          <p>
+            Agrivia, sahada yıllarını geçirmiş çiftçiler, tarım mühendisleri ve veri bilimciler tarafından
+            kurulan bir tarım teknoloji girişimidir. Teknolojiyi tarlaya indirmek, üreticilerin her yıl
+            daha bilinçli ve verimli kararlar almasını sağlamak için yola çıktık.
+          </p>
+
+          <p>
+            Yeni çağda “sezgiye dayalı tarım” yerini “veriye dayalı tarıma” bırakıyor. Agrivia,
+            bu dönüşümün merkezinde yer alarak; su, gübre, ürün seçimi ve verim hesaplamalarını
+            yapay zeka ile destekler.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <p class="quote">
+            “Bugünün kazanan çiftçisi, tarlaya bakarken aynı anda veriye de bakandır.”
+          </p>
+          <p class="quote-author">– Agrivia Ekibi</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+
+        <div>
+          <h2>Bizimle Çalışmak İster misiniz?</h2>
+          <p>
+            Formu doldurun, tarlanıza ve hedeflerinize özel 30 dakikalık ücretsiz analiz görüşmesi yapalım.
+          </p>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label>İsim Soyisim</label>
+            <input type="text" placeholder="Örn. Mehmet Karaca" />
+          </div>
+
+          <div class="form-group">
+            <label>E-posta</label>
+            <input type="email" placeholder="ornek@mail.com" />
+          </div>
+
+          <div class="form-group">
+            <label>Ürün Bilgisi</label>
+            <input type="text" placeholder="Örn. 40 dönüm mısır" />
+          </div>
+
+          <div class="form-group">
+            <label>Mesajınız</label>
+            <textarea rows="4" placeholder="Sorununuz, hedefiniz veya almak istediğiniz hizmet..."></textarea>
+          </div>
+
+          <button type="button" class="btn-primary full-width">Gönder (Demo)</button>
+          <p class="form-note">Bu form şimdilik yalnızca prototiptir.</p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2025 Agrivia Tarım Teknolojileri – Prototip Arayüz</span>
+      <span class="footer-links">
+        <a href="#hero">Yukarı çık</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- CHAT BUTTON -->
+  <button class="chat-toggle-btn" id="chat-toggle-btn">
+    Agrivia AI
+  </button>
+
+  <!-- CHAT WIDGET -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-widget-header">
+      <div>
+        <div class="chat-title">Agrivia AI Tarım Asistanı</div>
+        <div class="chat-subtitle">Soruların için buradayım – demo sürüm.</div>
+      </div>
+      <button class="chat-close" id="chat-close-btn">✕</button>
+    </div>
+
+    <div class="chat-body" id="chat-body">
+      <div class="chat-bubble ai">
+        Merhaba 👋 Tarlanla ilgili bana ne söylersen, sana analiz ve öneri üretirim.
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Örn. 'Buğdayda su kullanımını azaltmak istiyorum.'" />
+      <button id="chat-send-btn">Gönder</button>
+    </div>
+
+    <p class="chat-note">Gerçek AI bağlantısı henüz aktif değildir.</p>
+  </div>
+
+</body>
+</html>
