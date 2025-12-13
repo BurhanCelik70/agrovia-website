@@ -1,284 +1,333 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agrivia - Yapay Zeka Destekli Tarım Danışmanlığı</title>
+  <title>Agrovia - Yapay Zeka Destekli Tarım Teknolojileri</title>
+  
   <link rel="stylesheet" href="style.css" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
+    <div class="header-inner">
+      <a href="#" class="logo">
         <span class="logo-mark">A</span>
-        <span class="logo-text">Agrivia</span>
-      </div>
+        <span class="logo-text">Agrovia</span>
+      </a>
 
       <nav class="nav">
         <a href="#hero">Ana Sayfa</a>
-        <a href="#services">Hizmetler</a>
-        <a href="#how-it-works">Çalışma Şeklimiz</a>
-        <a href="#about">Hakkımızda</a>
-        <a href="#contact" class="nav-cta">İletişim</a>
+        <a href="#features">Çözümler</a>
+        <a href="#how-it-works">Teknoloji</a>
+        <a href="#about">Biz Kimiz?</a>
+        <a href="#contact" class="nav-cta">Demoyu Başlat</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
   <main>
     <section id="hero" class="hero">
       <div class="container hero-inner">
+        
         <div class="hero-content">
-
-          <p class="badge">Yeni Nesil Yapay Zeka Destekli Tarım Danışmanlığı</p>
-
+          <div class="badge">🚀 Yeni Nesil Tarım Teknolojisi v2.0</div>
+          
           <h1>
-            Toprağın bilgeliğini <span class="gradient-text">yapay zekayla</span> birleştiriyoruz.
+            Toprağın bilgeliğini <br>
+            <span class="gradient-text">Yapay Zeka</span> ile keşfedin.
           </h1>
 
           <p class="hero-subtitle">
-            Agrivia, yıllardır sahada çalışan çiftçilerin deneyimleri ile veri bilimini bir araya getiren
-            modern bir tarım teknoloji girişimidir. Amacımız; üreticilere doğru zamanda doğru kararı
-            verdirecek analizler sunarak, verimliliği her yıl daha yukarı taşımaktır.
+            Agrovia, tarlanızdaki verileri analiz ederek %30'a varan verim artışı sağlayan 
+            gelişmiş bir tarım asistanıdır. Sezgilere değil, verilere güvenin.
           </p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Ücretsiz Görüşme Planla</a>
+            <a href="#contact" class="btn-primary">Ücretsiz Analiz Başlat</a>
             <button class="btn-ghost" id="open-chat-from-hero">
-              Agrivia AI Asistanı ile Deneme Yap
+              Asistanı Dene ➜
             </button>
           </div>
 
           <div class="hero-metrics">
             <div class="metric">
-              <span class="metric-value">+28%</span>
-              <span class="metric-label">Ortalama verim artışı</span>
+              <span class="metric-value">%28</span>
+              <span class="metric-label">Verim Artışı</span>
             </div>
             <div class="metric">
               <span class="metric-value">3x</span>
-              <span class="metric-label">Daha hızlı karar alma</span>
+              <span class="metric-label">Hızlı Karar</span>
             </div>
             <div class="metric">
               <span class="metric-value">24/7</span>
-              <span class="metric-label">AI destekli danışmanlık</span>
+              <span class="metric-label">AI İzleme</span>
             </div>
           </div>
         </div>
 
-        <!-- HERO PANEL -->
-        <div class="hero-panel">
-          <div class="panel-header">
-            <span class="status-dot"></span>
-            <span>Agrivia AI Tarım Asistanı</span>
-          </div>
-
-          <div class="panel-body">
-            <div class="chat-bubble ai">
-              Merhaba! Tarlanla ilgili kısa bilgi verirsen, sana verim ve maliyet açısından en iyi planı öneririm.
+        <div class="hero-video-container">
+          <div style="background: white; border-radius: 12px; overflow: hidden; height: 100%; min-height: 400px; display: flex; flex-direction: column;">
+            <div style="background: #f1f2f6; padding: 10px 15px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e0e0e0;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f57;"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #28c940;"></div>
+              <div style="margin-left: auto; font-size: 0.7rem; color: #888; font-weight: 600;">AGROVIA DASHBOARD</div>
             </div>
-            <div class="chat-bubble user">
-              120 dönüm buğday ekili. Su maliyetleri arttı, ne yapmalıyım?
+            
+            <div style="padding: 20px; flex: 1; background: #fafafa; display: flex; flex-direction: column; gap: 15px;">
+              <div style="align-self: flex-start; background: white; padding: 12px 18px; border-radius: 12px 12px 12px 0; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05); max-width: 85%;">
+                <strong style="color: var(--color-primary); display: block; font-size: 0.8rem; margin-bottom: 4px;">Agrovia AI</strong>
+                Merhaba! Bugün araziniz için ne yapabilirim? Uydu verilerini taradım, nem oranı ideal seviyede.
+              </div>
+              
+              <div style="align-self: flex-end; background: #8e44ad; color: white; padding: 12px 18px; border-radius: 12px 12px 0 12px; max-width: 85%;">
+                Buğday hasadı için en uygun tarih tahmini nedir?
+              </div>
+              
+              <div style="align-self: flex-start; background: white; padding: 12px 18px; border-radius: 12px 12px 12px 0; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05); max-width: 85%;">
+                <strong style="color: var(--color-primary); display: block; font-size: 0.8rem; margin-bottom: 4px;">Agrovia AI</strong>
+                Analizlerime göre, önümüzdeki 12 gün boyunca yağış beklenmiyor. <strong>24-27 Haziran</strong> arası hasat için en verimli dönem olacaktır.
+              </div>
             </div>
-            <div class="chat-bubble ai">
-              İlk önerim: Sulama zamanlamasını sensör verilerine göre optimize edelim. %12'e kadar su tasarrufu mümkün.
+            
+            <div style="padding: 15px; background: white; border-top: 1px solid #eee;">
+               <div style="height: 10px; width: 60%; background: #f0f0f0; border-radius: 5px;"></div>
             </div>
           </div>
-
-          <div class="panel-input">
-            <input type="text" placeholder="Örn. 'Mısırda verimi artırmak istiyorum'" disabled />
-            <button disabled>Yakında</button>
-          </div>
-
-          <p class="panel-note">Bu alan prototiptir — henüz gerçek veri bağlantısı yok.</p>
+          <div class="video-caption">Agrovia Yapay Zeka Paneli (Önizleme)</div>
         </div>
+
       </div>
     </section>
 
-    <!-- HİZMETLER -->
-    <section id="services" class="section">
+    <section id="features" class="section">
       <div class="container">
-        <h2>Neler Sunuyoruz?</h2>
-        <p class="section-subtitle">
-          Tarladan çıkan her bilgi, daha iyi bir üretimin kapısını aralar. Agrivia bu bilgiyi anlamlandırır.
+        <h2 style="text-align: center;">Tarımda Dijital Dönüşüm</h2>
+        <p class="hero-subtitle" style="text-align: center; margin: 0 auto 3rem auto;">
+          Geleneksel yöntemleri modern teknolojiyle güçlendiriyoruz.
         </p>
 
-        <div class="grid-3">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
 
           <div class="card">
-            <h3>AI Destekli Ürün Tavsiyesi</h3>
-            <p>İklim, toprak analizi ve pazar fiyat tahminlerini bir araya getirerek doğru ürün seçimleri yapmanızı sağlarız.</p>
-            <ul>
-              <li>Toprak uygunluk raporu</li>
-              <li>Yıllık verim tahmini</li>
-              <li>Risk analizi</li>
-            </ul>
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌱</div>
+            <h3>Akıllı Ürün Tavsiyesi</h3>
+            <p>Toprak analiz raporlarınızı ve bölgesel iklim verilerini işleyerek, en yüksek kâr getirecek ürünü sizin için belirleriz.</p>
           </div>
 
           <div class="card">
-            <h3>Akıllı Sulama & Gübreleme</h3>
-            <p>Su ve gübre kullanımını optimize eden analizler ile maliyetleri düşürür, verimi artırırız.</p>
-            <ul>
-              <li>Zamanlama önerileri</li>
-              <li>İsrafı azaltan otomasyon planı</li>
-              <li>Gerçek zamanlı takip</li>
-            </ul>
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">💧</div>
+            <h3>Hassas Sulama</h3>
+            <p>Suyun her damlası değerli. Sensör verileriyle bitkinin ihtiyacı olduğu anda ve miktarda sulama önerileri alın.</p>
           </div>
 
           <div class="card">
-            <h3>Veri Tabanlı Üretim Planı</h3>
-            <p>Geçmiş veriler, hava durumu, verim tahminleri ve piyasa analizleri ile geleceğe hazır bir plan oluştururuz.</p>
-            <ul>
-              <li>Sezon planlama</li>
-              <li>Maliyet & kâr simülasyonu</li>
-              <li>Otomatik uyarı sistemi</li>
-            </ul>
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+            <h3>Verim Tahminleme</h3>
+            <p>Sezon başında yapay zeka simülasyonları ile yıl sonu hasat miktarınızı ve tahmini gelirinizi hesaplayın.</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- NASIL ÇALIŞIR -->
     <section id="how-it-works" class="section section-alt">
       <div class="container">
-        <h2>Agrivia nasıl çalışır?</h2>
+        <div style="text-align: center; margin-bottom: 3rem;">
+           <h2>Nasıl Çalışır?</h2>
+           <p>Karmaşık veriler, basit sonuçlar.</p>
+        </div>
 
-        <div class="steps">
-          <div class="step">
-            <span class="step-number">1</span>
-            <h3>Keşif</h3>
-            <p>Tarlan, ürünlerin, hedeflerin ve sorunların hakkında bilgi alırız.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+          <div class="step" style="flex: 1; min-width: 250px;">
+            <span style="font-size: 4rem; font-weight: 800; color: rgba(142, 68, 173, 0.1); display: block; line-height: 1;">01</span>
+            <h3>Veri Girişi</h3>
+            <p>Tarlanızın konumunu ve geçmiş ekim verilerinizi sisteme girin.</p>
           </div>
 
-          <div class="step">
-            <span class="step-number">2</span>
-            <h3>Analiz</h3>
-            <p>Tarım verileri + hava tahmini + geçmiş sonuçlar → AI tarafından analiz edilir.</p>
+          <div class="step" style="flex: 1; min-width: 250px;">
+            <span style="font-size: 4rem; font-weight: 800; color: rgba(142, 68, 173, 0.1); display: block; line-height: 1;">02</span>
+            <h3>AI Analizi</h3>
+            <p>Algoritmalarımız uydu görüntüleri ve iklim modelleriyle arazinizi analiz eder.</p>
           </div>
 
-          <div class="step">
-            <span class="step-number">3</span>
-            <h3>Öneri & Plan</h3>
-            <p>Sana daha yüksek verim ve daha düşük maliyet için 30-60-90 günlük plan sunarız.</p>
+          <div class="step" style="flex: 1; min-width: 250px;">
+            <span style="font-size: 4rem; font-weight: 800; color: rgba(142, 68, 173, 0.1); display: block; line-height: 1;">03</span>
+            <h3>Uygulama</h3>
+            <p>Size özel oluşturulan reçeteyi uygulayın, süreci mobil uygulamadan takip edin.</p>
           </div>
         </div>
       </div>
     </section>
+<section id="real-time-showcase" class="section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+           <span class="badge" style="background: rgba(39, 174, 96, 0.1); color: #27ae60;">SAHADAN CANLI ÖRNEKLER</span>
+           <h2>Agrovia Teknolojisi İş Başında</h2>
+           <p class="hero-subtitle" style="margin: 1.5rem auto; max-width: 800px;">
+             Yapay zekamızın tarladaki sorunları nasıl tespit ettiğini ve çiftçilerimize nasıl anlık, uygulanabilir çözümler sunduğunu gerçek saha görüntüleriyle keşfedin.
+           </p>
+        </div>
 
-    <!-- HAKKIMIZDA -->
+        <div class="showcase-grid">
+          
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-yumru.png" alt="Yumru Hastalık Analizi" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>🔍 Yumru Sağlık & Gübre Analizi</h3>
+              <p>Toprak altındaki yumrunun kabuk kalitesini analiz ediyor, hastalık riskini (Rhizoctonia/Uyuz) belirliyoruz. Toprak sülfat seviyesini ölçerek gereksiz gübrelemeyi engelliyor, paranızı koruyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-sulama.png" alt="Sulama ve Besin Analizi" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>💧 Akıllı Sulama & Besin Takibi</h3>
+              <p>Çiçeklenme döneminde bitkinin su stresini ve kritik element ihtiyacını (örn. Bor) anlık tespit ediyoruz. Verim kaybını önleyen nokta atışı tavsiyeler veriyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-hasat.png" alt="Hasat Hazırlık Analizi" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>🚜 Söküme Hazırlık & Son Adımlar</h3>
+              <p>Sezon sonunda sulama kontrolü, zararlı mücadelesi ve ekipman hazırlığı için adım adım rehberlik ediyoruz. Yumru kalitesini depoya girene kadar koruyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-tarama.png" alt="Geniş Alan Tarama" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>⚡ Erken Dönem Gelişim Taraması</h3>
+              <p>Geniş arazileri ızgara sistemiyle tarayarak, bitki gelişim geriliği olan bölgeleri (örn. Azot eksikliği) erkenden tespit ediyor ve bölgesel müdahale planı sunuyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
     <section id="about" class="section">
-      <div class="container about-grid">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          
+          <div>
+            <h2>Agrovia Vizyonu</h2>
+            <p style="font-size: 1.1rem; color: #555;">
+              Biz sadece bir yazılım şirketi değiliz; biz toprağa aşık mühendisleriz.
+            </p>
+            <p>
+              Agrovia, tarımsal üretimi belirsizliklerden kurtarmak için kuruldu. 
+              Küresel iklim değişikliği ile mücadele ederken, çiftçimizin emeğinin karşılığını 
+              tam olarak almasını sağlamak en büyük motivasyonumuz.
+            </p>
+            <div style="margin-top: 2rem;">
+               <span class="badge" style="background: #e8f5e9; color: #2ecc71;">Sürdürülebilir Tarım</span>
+               <span class="badge" style="background: #e3f2fd; color: #3498db;">Veri Bilimi</span>
+            </div>
+          </div>
 
-        <div>
-          <h2>Agrivia'nın Hikâyesi</h2>
-          <p>
-            Agrivia, sahada yıllarını geçirmiş çiftçiler, tarım mühendisleri ve veri bilimciler tarafından
-            kurulan bir tarım teknoloji girişimidir. Teknolojiyi tarlaya indirmek, üreticilerin her yıl
-            daha bilinçli ve verimli kararlar almasını sağlamak için yola çıktık.
-          </p>
+          <div class="card" style="text-align: center; border-left: 4px solid var(--color-primary);">
+            <p style="font-size: 1.2rem; font-style: italic; color: #333;">
+              “Geleceğin tarımı, traktörün gücüyle değil, verinin gücüyle yapılacak.”
+            </p>
+            <p style="margin-top: 1rem; font-weight: bold; color: var(--color-primary);">Agrovia Kurucu Ekibi</p>
+          </div>
 
-          <p>
-            Yeni çağda “sezgiye dayalı tarım” yerini “veriye dayalı tarıma” bırakıyor. Agrivia,
-            bu dönüşümün merkezinde yer alarak; su, gübre, ürün seçimi ve verim hesaplamalarını
-            yapay zeka ile destekler.
-          </p>
         </div>
-
-        <div class="about-card">
-          <p class="quote">
-            “Bugünün kazanan çiftçisi, tarlaya bakarken aynı anda veriye de bakandır.”
-          </p>
-          <p class="quote-author">– Agrivia Ekibi</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- İLETİŞİM -->
     <section id="contact" class="section section-alt">
-      <div class="container contact-grid">
-
-        <div>
-          <h2>Bizimle Çalışmak İster misiniz?</h2>
-          <p>
-            Formu doldurun, tarlanıza ve hedeflerinize özel 30 dakikalık ücretsiz analiz görüşmesi yapalım.
-          </p>
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h2>Bizimle İletişime Geçin</h2>
+          <p>Tarlanızın potansiyelini keşfetmek için ilk adımı atın.</p>
+          
+          <form class="card" style="text-align: left; margin-top: 2rem;">
+            <div style="margin-bottom: 1rem;">
+              <label style="font-weight: 600; font-size: 0.9rem;">Ad Soyad</label>
+              <input type="text" placeholder="Adınız" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <label style="font-weight: 600; font-size: 0.9rem;">E-posta</label>
+              <input type="email" placeholder="ornek@mail.com" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <label style="font-weight: 600; font-size: 0.9rem;">Mesajınız</label>
+              <textarea rows="4" placeholder="Nasıl yardımcı olabiliriz?" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
+            </div>
+            
+            <button type="button" class="btn-primary" style="width: 100%;">Gönder</button>
+          </form>
         </div>
-
-        <form class="contact-form">
-          <div class="form-group">
-            <label>İsim Soyisim</label>
-            <input type="text" placeholder="Örn. Mehmet Karaca" />
-          </div>
-
-          <div class="form-group">
-            <label>E-posta</label>
-            <input type="email" placeholder="ornek@mail.com" />
-          </div>
-
-          <div class="form-group">
-            <label>Ürün Bilgisi</label>
-            <input type="text" placeholder="Örn. 40 dönüm mısır" />
-          </div>
-
-          <div class="form-group">
-            <label>Mesajınız</label>
-            <textarea rows="4" placeholder="Sorununuz, hedefiniz veya almak istediğiniz hizmet..."></textarea>
-          </div>
-
-          <button type="button" class="btn-primary full-width">Gönder (Demo)</button>
-          <p class="form-note">Bu form şimdilik yalnızca prototiptir.</p>
-        </form>
-
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© 2025 Agrivia Tarım Teknolojileri – Prototip Arayüz</span>
-      <span class="footer-links">
-        <a href="#hero">Yukarı çık</a>
-      </span>
+  <footer style="background: white; border-top: 1px solid #eee; padding: 2rem 0; margin-top: 2rem;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="logo-mark" style="width: 24px; height: 24px; font-size: 0.8rem;">A</span>
+        <strong>Agrovia Inc.</strong>
+      </div>
+      <div style="font-size: 0.9rem; color: #888;">
+        © 2025 Tüm Hakları Saklıdır.
+      </div>
     </div>
   </footer>
 
-  <!-- CHAT BUTTON -->
-  <button class="chat-toggle-btn" id="chat-toggle-btn">
-    Agrivia AI
+  <button class="chat-toggle-btn" id="chat-toggle-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; padding: 15px 25px; border-radius: 50px; border: none; background: var(--color-primary); color: white; box-shadow: 0 10px 20px rgba(142,68,173,0.4); cursor: pointer; font-weight: 600;">
+    💬 Agrovia Asistan
   </button>
 
-  <!-- CHAT WIDGET -->
-  <div class="chat-widget" id="chat-widget">
-    <div class="chat-widget-header">
-      <div>
-        <div class="chat-title">Agrivia AI Tarım Asistanı</div>
-        <div class="chat-subtitle">Soruların için buradayım – demo sürüm.</div>
-      </div>
-      <button class="chat-close" id="chat-close-btn">✕</button>
+  <div class="chat-widget" id="chat-widget" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 320px; background: white; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); z-index: 999; overflow: hidden; border: 1px solid #eee;">
+    <div style="background: var(--color-primary); padding: 15px; color: white; display: flex; justify-content: space-between;">
+      <span>Asistan</span>
+      <span id="chat-close-btn" style="cursor: pointer;">✕</span>
     </div>
-
-    <div class="chat-body" id="chat-body">
-      <div class="chat-bubble ai">
-        Merhaba 👋 Tarlanla ilgili bana ne söylersen, sana analiz ve öneri üretirim.
+    <div style="padding: 15px; height: 300px; overflow-y: auto; background: #fafafa;">
+      <div style="background: white; padding: 10px; border-radius: 10px; border: 1px solid #eee; font-size: 0.9rem;">
+        Merhaba! Ben Agrovia Asistan. Sorularınızı yanıtlamaya hazırım.
       </div>
     </div>
-
-    <div class="chat-input-area">
-      <input type="text" id="chat-input" placeholder="Örn. 'Buğdayda su kullanımını azaltmak istiyorum.'" />
-      <button id="chat-send-btn">Gönder</button>
+    <div style="padding: 10px; border-top: 1px solid #eee; display: flex;">
+      <input type="text" placeholder="Yazın..." style="flex: 1; border: none; outline: none; padding: 5px;">
+      <button style="border: none; background: none; color: var(--color-primary); font-weight: bold; cursor: pointer;">Gönder</button>
     </div>
-
-    <p class="chat-note">Gerçek AI bağlantısı henüz aktif değildir.</p>
   </div>
 
 </body>
