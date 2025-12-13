@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrovia - Yapay Zeka Destekli Tarım Teknolojileri</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Agrovia</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#hero">Ana Sayfa</a>
+        <a href="#features">Çözümler</a>
+        <a href="#how-it-works">Teknoloji</a>
+        <a href="#about">Biz Kimiz?</a>
+        <a href="#contact" class="nav-cta">Demoyu Başlat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        
+        <div class="hero-content">
+          <div class="badge">🚀 Yeni Nesil Tarım Teknolojisi v2.0</div>
+          
+          <h1>
+            Toprağın bilgeliğini <br>
+            <span class="gradient-text">Yapay Zeka</span> ile keşfedin.
+          </h1>
+
+          <p class="hero-subtitle">
+            Agrovia, tarlanızdaki verileri analiz ederek %30'a varan verim artışı sağlayan 
+            gelişmiş bir tarım asistanıdır. Sezgilere değil, verilere güvenin.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Ücretsiz Analiz Başlat</a>
+            <button class="btn-ghost" id="open-chat-from-hero">
+              Asistanı Dene ➜
+            </button>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value">%28</span>
+              <span class="metric-label">Verim Artışı</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">3x</span>
+              <span class="metric-label">Hızlı Karar</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">24/7</span>
+              <span class="metric-label">AI İzleme</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-video-container">
+          <div style="background: white; border-radius: 12px; overflow: hidden; height: 100%; min-height: 400px; display: flex; flex-direction: column;">
+            <div style="background: #f1f2f6; padding: 10px 15px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e0e0e0;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f57;"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></div>
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: #28c940;"></div>
+              <div style="margin-left: auto; font-size: 0.7rem; color: #888; font-weight: 600;">AGROVIA DASHBOARD</div>
+            </div>
+            
+            <div style="padding: 20px; flex: 1; background: #fafafa; display: flex; flex-direction: column; gap: 15px;">
+              <div style="align-self: flex-start; background: white; padding: 12px 18px; border-radius: 12px 12px 12px 0; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05); max-width: 85%;">
+                <strong style="color: var(--color-primary); display: block; font-size: 0.8rem; margin-bottom: 4px;">Agrovia AI</strong>
+                Merhaba! Bugün araziniz için ne yapabilirim? Uydu verilerini taradım, nem oranı ideal seviyede.
+              </div>
+              
+              <div style="align-self: flex-end; background: #8e44ad; color: white; padding: 12px 18px; border-radius: 12px 12px 0 12px; max-width: 85%;">
+                Buğday hasadı için en uygun tarih tahmini nedir?
+              </div>
+              
+              <div style="align-self: flex-start; background: white; padding: 12px 18px; border-radius: 12px 12px 12px 0; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05); max-width: 85%;">
+                <strong style="color: var(--color-primary); display: block; font-size: 0.8rem; margin-bottom: 4px;">Agrovia AI</strong>
+                Analizlerime göre, önümüzdeki 12 gün boyunca yağış beklenmiyor. <strong>24-27 Haziran</strong> arası hasat için en verimli dönem olacaktır.
+              </div>
+            </div>
+            
+            <div style="padding: 15px; background: white; border-top: 1px solid #eee;">
+               <div style="height: 10px; width: 60%; background: #f0f0f0; border-radius: 5px;"></div>
+            </div>
+          </div>
+          <div class="video-caption">Agrovia Yapay Zeka Paneli (Önizleme)</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">Tarımda Dijital Dönüşüm</h2>
+        <p class="hero-subtitle" style="text-align: center; margin: 0 auto 3rem auto;">
+          Geleneksel yöntemleri modern teknolojiyle güçlendiriyoruz.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+          <div class="card">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌱</div>
+            <h3>Akıllı Ürün Tavsiyesi</h3>
+            <p>Toprak analiz raporlarınızı ve bölgesel iklim verilerini işleyerek, en yüksek kâr getirecek ürünü sizin için belirleriz.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">💧</div>
+            <h3>Hassas Sulama</h3>
+            <p>Suyun her damlası değerli. Sensör verileriyle bitkinin ihtiyacı olduğu anda ve miktarda sulama önerileri alın.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+            <h3>Verim Tahminleme</h3>
+            <p>Sezon başında yapay zeka simülasyonları ile yıl sonu hasat miktarınızı ve tahmini gelirinizi hesaplayın.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section section-alt">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+           <h2>Nasıl Çalışır?</h2>
+           <p>Karmaşık veriler, basit sonuçlar.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+          <div class="step" style="flex: 1; min-width: 250px;">
+            <span style="font-size: 4rem; font-weight: 800; color: rgba(142, 68, 173, 0.1); display: block; line-height: 1;">01</span>
+            <h3>Veri Girişi</h3>
+            <p>Tarlanızın konumunu ve geçmiş ekim verilerinizi sisteme girin.</p>
+          </div>
+
+          <div class="step" style="flex: 1; min-width: 250px;">
+            <span style="font-size: 4rem; font-weight: 800; color: rgba(142, 68, 173, 0.1); display: block; line-height: 1;">02</span>
+            <h3>AI Analizi</h3>
+            <p>Algoritmalarımız uydu görüntüleri ve iklim modelleriyle arazinizi analiz eder.</p>
+          </div>
+
+          <div class="step" style="flex: 1; min-width: 250px;">
+            <span style="font-size: 4rem; font-weight: 800; color: rgba(142, 68, 173, 0.1); display: block; line-height: 1;">03</span>
+            <h3>Uygulama</h3>
+            <p>Size özel oluşturulan reçeteyi uygulayın, süreci mobil uygulamadan takip edin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="real-time-showcase" class="section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+           <span class="badge" style="background: rgba(39, 174, 96, 0.1); color: #27ae60;">SAHADAN CANLI ÖRNEKLER</span>
+           <h2>Agrovia Teknolojisi İş Başında</h2>
+           <p class="hero-subtitle" style="margin: 1.5rem auto; max-width: 800px;">
+             Yapay zekamızın tarladaki sorunları nasıl tespit ettiğini ve çiftçilerimize nasıl anlık, uygulanabilir çözümler sunduğunu gerçek saha görüntüleriyle keşfedin.
+           </p>
+        </div>
+
+        <div class="showcase-grid">
+          
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-yumru.png" alt="Yumru Hastalık Analizi" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>🔍 Yumru Sağlık & Gübre Analizi</h3>
+              <p>Toprak altındaki yumrunun kabuk kalitesini analiz ediyor, hastalık riskini (Rhizoctonia/Uyuz) belirliyoruz. Toprak sülfat seviyesini ölçerek gereksiz gübrelemeyi engelliyor, paranızı koruyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-sulama.png" alt="Sulama ve Besin Analizi" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>💧 Akıllı Sulama & Besin Takibi</h3>
+              <p>Çiçeklenme döneminde bitkinin su stresini ve kritik element ihtiyacını (örn. Bor) anlık tespit ediyoruz. Verim kaybını önleyen nokta atışı tavsiyeler veriyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-hasat.png" alt="Hasat Hazırlık Analizi" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>🚜 Söküme Hazırlık & Son Adımlar</h3>
+              <p>Sezon sonunda sulama kontrolü, zararlı mücadelesi ve ekipman hazırlığı için adım adım rehberlik ediyoruz. Yumru kalitesini depoya girene kadar koruyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-image-container">
+              <img src="gercek-analiz-tarama.png" alt="Geniş Alan Tarama" class="showcase-img">
+              <div class="scan-line"></div>
+            </div>
+            <div class="showcase-details">
+              <h3>⚡ Erken Dönem Gelişim Taraması</h3>
+              <p>Geniş arazileri ızgara sistemiyle tarayarak, bitki gelişim geriliği olan bölgeleri (örn. Azot eksikliği) erkenden tespit ediyor ve bölgesel müdahale planı sunuyoruz.</p>
+              <div class="real-data-note">
+                <span class="pulse-dot"></span> Gerçek Saha Verisidir.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          
+          <div>
+            <h2>Agrovia Vizyonu</h2>
+            <p style="font-size: 1.1rem; color: #555;">
+              Biz sadece bir yazılım şirketi değiliz; biz toprağa aşık mühendisleriz.
+            </p>
+            <p>
+              Agrovia, tarımsal üretimi belirsizliklerden kurtarmak için kuruldu. 
+              Küresel iklim değişikliği ile mücadele ederken, çiftçimizin emeğinin karşılığını 
+              tam olarak almasını sağlamak en büyük motivasyonumuz.
+            </p>
+            <div style="margin-top: 2rem;">
+               <span class="badge" style="background: #e8f5e9; color: #2ecc71;">Sürdürülebilir Tarım</span>
+               <span class="badge" style="background: #e3f2fd; color: #3498db;">Veri Bilimi</span>
+            </div>
+          </div>
+
+          <div class="card" style="text-align: center; border-left: 4px solid var(--color-primary);">
+            <p style="font-size: 1.2rem; font-style: italic; color: #333;">
+              “Geleceğin tarımı, traktörün gücüyle değil, verinin gücüyle yapılacak.”
+            </p>
+            <p style="margin-top: 1rem; font-weight: bold; color: var(--color-primary);">Agrovia Kurucu Ekibi</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h2>Bizimle İletişime Geçin</h2>
+          <p>Tarlanızın potansiyelini keşfetmek için ilk adımı atın.</p>
+          
+          <form class="card" style="text-align: left; margin-top: 2rem;">
+            <div style="margin-bottom: 1rem;">
+              <label style="font-weight: 600; font-size: 0.9rem;">Ad Soyad</label>
+              <input type="text" placeholder="Adınız" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <label style="font-weight: 600; font-size: 0.9rem;">E-posta</label>
+              <input type="email" placeholder="ornek@mail.com" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <label style="font-weight: 600; font-size: 0.9rem;">Mesajınız</label>
+              <textarea rows="4" placeholder="Nasıl yardımcı olabiliriz?" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
+            </div>
+            
+            <button type="button" class="btn-primary" style="width: 100%;">Gönder</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: white; border-top: 1px solid #eee; padding: 2rem 0; margin-top: 2rem;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="logo-mark" style="width: 24px; height: 24px; font-size: 0.8rem;">A</span>
+        <strong>Agrovia Inc.</strong>
+      </div>
+      <div style="font-size: 0.9rem; color: #888;">
+        © 2025 Tüm Hakları Saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <button class="chat-toggle-btn" id="chat-toggle-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; padding: 15px 25px; border-radius: 50px; border: none; background: var(--color-primary); color: white; box-shadow: 0 10px 20px rgba(142,68,173,0.4); cursor: pointer; font-weight: 600;">
+    💬 Agrovia Asistan
+  </button>
+
+  <div class="chat-widget" id="chat-widget" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 320px; background: white; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); z-index: 999; overflow: hidden; border: 1px solid #eee;">
+    <div style="background: var(--color-primary); padding: 15px; color: white; display: flex; justify-content: space-between;">
+      <span>Asistan</span>
+      <span id="chat-close-btn" style="cursor: pointer;">✕</span>
+    </div>
+    <div style="padding: 15px; height: 300px; overflow-y: auto; background: #fafafa;">
+      <div style="background: white; padding: 10px; border-radius: 10px; border: 1px solid #eee; font-size: 0.9rem;">
+        Merhaba! Ben Agrovia Asistan. Sorularınızı yanıtlamaya hazırım.
+      </div>
+    </div>
+    <div style="padding: 10px; border-top: 1px solid #eee; display: flex;">
+      <input type="text" placeholder="Yazın..." style="flex: 1; border: none; outline: none; padding: 5px;">
+      <button style="border: none; background: none; color: var(--color-primary); font-weight: bold; cursor: pointer;">Gönder</button>
+    </div>
+  </div>
+
+</body>
+</html>
