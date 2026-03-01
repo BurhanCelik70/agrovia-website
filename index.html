@@ -11,21 +11,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* =========================================
-       1. AGROVIA DARK THEME - AYARLAR
-       ========================================= */
     :root {
-      /* Renk Paleti: Derin Lacivert & Neon Yeşil */
-      --bg-dark: #0f172a;       /* Ana Arka Plan */
-      --bg-card: #1e293b;       /* Kart Rengi */
-      --bg-darker: #020617;     /* Koyu Arka Plan */
-      
-      --primary: #a855f7;       /* Mor (AI) */
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --bg-darker: #020617;
+      --primary: #a855f7;
       --primary-hover: #9333ea;
-      --accent: #22c55e;        /* Yeşil (Tarım) */
-      --text-main: #f8fafc;     /* Beyaz Metin */
-      --text-muted: #94a3b8;    /* Gri Metin */
-      
+      --accent: #22c55e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
       --border: 1px solid rgba(255, 255, 255, 0.1);
       --shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
     }
@@ -40,13 +34,8 @@
       line-height: 1.6;
     }
 
-    .container {
-      width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px;
-    }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
-    /* =========================================
-       2. HEADER (MENÜ)
-       ========================================= */
     .site-header {
       position: absolute; top: 0; left: 0; width: 100%; z-index: 100;
       padding: 20px 0;
@@ -78,29 +67,21 @@
     }
     .btn-nav:hover { background: var(--primary); border-color: var(--primary); }
 
-    /* =========================================
-       3. HERO SECTION (GİRİŞ)
-       ========================================= */
     .hero-section {
       position: relative; height: 100vh; min-height: 750px;
       display: flex; align-items: center; justify-content: center;
       text-align: center; overflow: hidden; padding-top: 80px;
     }
 
-    /* Arka Plan & Efektler */
     .hero-bg {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
-      /* Resim dosyanın adı hero-bg.png ise burayı değiştirme */
-      background-image: url('hero-bg.png'); 
-      /* Eğer resim yoksa internetten bir tane çekelim (Yedek) */
-      background-image: url('hero-bg.png'); 
+      background-image: url('hero-bg.png');
       background-size: cover; background-position: center;
     }
     
     .hero-overlay {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
-      background: rgba(15, 23, 42, 0.75); /* Koyu Lacivert Filtre */
-      /* Neon Yeşil Izgara */
+      background: rgba(15, 23, 42, 0.75);
       background-image: 
         linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
@@ -154,10 +135,7 @@
     }
     .btn-ghost:hover { background: white; color: var(--bg-dark); }
 
-    /* İstatistikler */
-    .hero-metrics {
-      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
-    }
+    .hero-metrics { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
     .metric {
       background: rgba(30, 41, 59, 0.8); border: var(--border);
       padding: 15px 30px; border-radius: 16px; backdrop-filter: blur(10px);
@@ -166,16 +144,11 @@
     .metric-value { font-size: 1.8rem; font-weight: 800; color: white; line-height: 1; }
     .metric-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; }
 
-    /* =========================================
-       4. SECTIONS (BÖLÜMLER)
-       ========================================= */
     .section { padding: 80px 0; }
-    .section-alt { background-color: var(--bg-darker); } /* Daha koyu arka plan */
-    
+    .section-alt { background-color: var(--bg-darker); }
     .section h2 { font-size: 2.5rem; text-align: center; margin-bottom: 10px; color: white; }
     .section > .container > p { text-align: center; color: var(--text-muted); margin-bottom: 50px; }
 
-    /* KARTLAR */
     .card {
       background: var(--bg-card); padding: 30px; border-radius: 20px;
       border: var(--border); transition: 0.3s;
@@ -186,7 +159,6 @@
 
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
-    /* NASIL ÇALIŞIR */
     .step {
       background: var(--bg-card); padding: 30px; border-radius: 20px;
       text-align: center; border: var(--border); flex: 1; min-width: 250px;
@@ -200,7 +172,6 @@
     .step h3 { color: white; margin-bottom: 10px; }
     .step p { color: var(--text-muted); }
 
-    /* SAHADAN ÖRNEKLER (SHOWCASE) */
     .showcase-card {
       background: var(--bg-card); border-radius: 20px; overflow: hidden;
       border: var(--border); transition: 0.3s;
@@ -213,7 +184,6 @@
     }
     .showcase-img { width: 100%; height: 100%; object-fit: contain; }
     
-    /* Yeşil Tarama Çizgisi */
     .scan-line {
       position: absolute; top: 0; left: 0; width: 100%; height: 2px;
       background: var(--accent); box-shadow: 0 0 15px var(--accent);
@@ -232,7 +202,6 @@
     }
     .pulse-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
 
-    /* BİZ KİMİZ */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
     .about-text h2 { text-align: left; margin-bottom: 20px; }
     .about-text p { color: var(--text-muted); margin-bottom: 20px; }
@@ -241,7 +210,6 @@
       padding: 30px; border-radius: 0 16px 16px 0; color: white; font-style: italic; font-size: 1.1rem;
     }
 
-    /* İLETİŞİM FORM */
     .contact-container { max-width: 600px; margin: 0 auto; text-align: center; }
     .contact-form {
       background: var(--bg-card); padding: 40px; border-radius: 20px;
@@ -253,17 +221,13 @@
       background: var(--bg-dark); border: var(--border);
       color: white; margin-bottom: 20px; font-family: inherit;
     }
-    .contact-form input:focus, .contact-form textarea:focus {
-      outline: none; border-color: var(--primary);
-    }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); }
 
-    /* FOOTER */
     footer {
       background: var(--bg-darker); padding: 40px 0; border-top: var(--border); margin-top: 50px;
     }
     .footer-content { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.9rem; }
 
-    /* ASİSTAN BUTONU */
     .chat-toggle-btn {
       position: fixed; bottom: 30px; right: 30px; z-index: 999;
       padding: 15px 30px; border-radius: 50px; border: none;
@@ -273,7 +237,6 @@
     }
     .chat-toggle-btn:hover { transform: translateY(-3px); background: var(--primary-hover); }
 
-    /* Mobil Uyum */
     @media (max-width: 768px) {
       .nav-menu { display: none; }
       h1 { font-size: 2.5rem; }
@@ -296,14 +259,12 @@
         <span class="logo-mark">A</span>
         <span class="logo-text">Agrovia</span>
       </a>
-
       <nav class="nav-menu">
         <a href="#hero">Ana Sayfa</a>
         <a href="#features">Çözümler</a>
         <a href="#real-time-showcase">Teknoloji</a>
         <a href="#about">Biz Kimiz?</a>
       </nav>
-      
       <a href="#contact" class="btn-nav">Demoyu Başlat</a>
     </div>
   </header>
@@ -312,38 +273,21 @@
     <section id="hero" class="hero-section">
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
-      
       <div class="hero-content">
         <div class="hero-badge">🚀 Yeni Nesil Tarım Teknolojisi v2.0</div>
-        
-        <h1>
-          Toprağın Bilgeliğini <br>
-          <span class="gradient-text">Yapay Zeka</span> ile Keşfedin.
-        </h1>
-
+        <h1>Toprağın Bilgeliğini <br><span class="gradient-text">Yapay Zeka</span> ile Keşfedin.</h1>
         <p class="hero-subtitle">
           Geleneksel yöntemler artık tarih oluyor! Her sektör işine yapay zeka entegre ederken 
           çiftçiler neden edemesin? Agrovia sayesinde tarlanızı teknolojiyle buluşturun ve çağa ayak uydurun.
         </p>
-
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">Ücretsiz Analiz Başlat</a>
           <button class="btn-ghost" id="open-chat-from-hero">Asistanı Dene ➜</button>
         </div>
-
         <div class="hero-metrics">
-          <div class="metric">
-            <span class="metric-value">%28</span>
-            <span class="metric-label">Verim Artışı</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">3x</span>
-            <span class="metric-label">Hızlı Karar</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">24/7</span>
-            <span class="metric-label">AI İzleme</span>
-          </div>
+          <div class="metric"><span class="metric-value">%28</span><span class="metric-label">Verim Artışı</span></div>
+          <div class="metric"><span class="metric-value">3x</span><span class="metric-label">Hızlı Karar</span></div>
+          <div class="metric"><span class="metric-value">24/7</span><span class="metric-label">AI İzleme</span></div>
         </div>
       </div>
     </section>
@@ -352,23 +296,10 @@
       <div class="container">
         <h2>Tarımda Dijital Dönüşüm</h2>
         <p>Geleneksel yöntemleri modern teknolojiyle güçlendiriyoruz.</p>
-
         <div class="grid-3">
-          <div class="card">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌱</div>
-            <h3>Akıllı Ürün Tavsiyesi</h3>
-            <p>Toprak analiz raporlarınızı ve bölgesel iklim verilerini işleyerek, en yüksek kâr getirecek ürünü sizin için belirleriz.</p>
-          </div>
-          <div class="card">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">💧</div>
-            <h3>Hassas Sulama</h3>
-            <p>Suyun her damlası değerli. Sensör verileriyle bitkinin ihtiyacı olduğu anda ve miktarda sulama önerileri alın.</p>
-          </div>
-          <div class="card">
-            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
-            <h3>Verim Tahminleme</h3>
-            <p>Sezon başında yapay zeka simülasyonları ile yıl sonu hasat miktarınızı ve tahmini gelirinizi hesaplayın.</p>
-          </div>
+          <div class="card"><div style="font-size: 2.5rem; margin-bottom: 1rem;">🌱</div><h3>Akıllı Ürün Tavsiyesi</h3><p>Toprak analiz raporlarınızı ve bölgesel iklim verilerini işleyerek, en yüksek kâr getirecek ürünü sizin için belirleriz.</p></div>
+          <div class="card"><div style="font-size: 2.5rem; margin-bottom: 1rem;">💧</div><h3>Hassas Sulama</h3><p>Suyun her damlası değerli. Sensör verileriyle bitkinin ihtiyacı olduğu anda ve miktarda sulama önerileri alın.</p></div>
+          <div class="card"><div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div><h3>Verim Tahminleme</h3><p>Sezon başında yapay zeka simülasyonları ile yıl sonu hasat miktarınızı ve tahmini gelirinizi hesaplayın.</p></div>
         </div>
       </div>
     </section>
@@ -377,23 +308,10 @@
       <div class="container">
         <h2>Nasıl Çalışır?</h2>
         <p>Karmaşık veriler, basit sonuçlar.</p>
-
         <div class="steps-container">
-          <div class="step">
-            <span>01</span>
-            <h3>Veri Girişi</h3>
-            <p>Tarlanızın konumunu ve geçmiş ekim verilerinizi sisteme girin.</p>
-          </div>
-          <div class="step">
-            <span>02</span>
-            <h3>AI Analizi</h3>
-            <p>Algoritmalarımız uydu görüntüleri ve iklim modelleriyle arazinizi analiz eder.</p>
-          </div>
-          <div class="step">
-            <span>03</span>
-            <h3>Uygulama</h3>
-            <p>Size özel oluşturulan reçeteyi uygulayın, süreci mobil uygulamadan takip edin.</p>
-          </div>
+          <div class="step"><span>01</span><h3>Veri Girişi</h3><p>Tarlanızın konumunu ve geçmiş ekim verilerinizi sisteme girin.</p></div>
+          <div class="step"><span>02</span><h3>AI Analizi</h3><p>Algoritmalarımız uydu görüntüleri ve iklim modelleriyle arazinizi analiz eder.</p></div>
+          <div class="step"><span>03</span><h3>Uygulama</h3><p>Size özel oluşturulan reçeteyi uygulayın, süreci mobil uygulamadan takip edin.</p></div>
         </div>
       </div>
     </section>
@@ -402,54 +320,22 @@
       <div class="container">
         <h2>Agrovia Teknolojisi İş Başında</h2>
         <p>Yapay zekamızın tarladaki sorunları nasıl tespit ettiğini ve çiftçilerimize nasıl çözümler sunduğunu keşfedin.</p>
-
         <div class="grid-3">
           <div class="showcase-card">
-            <div class="showcase-image-container">
-              <img src="gercek-analiz-yumru.png" alt="Yumru Hastalık Analizi" class="showcase-img">
-              <div class="scan-line"></div>
-            </div>
-            <div class="showcase-details">
-              <h3>🔍 Yumru Sağlık & Gübre</h3>
-              <p>Toprak altındaki yumrunun kabuk kalitesini analiz ediyor, hastalık riskini (Rhizoctonia/Uyuz) belirliyoruz.</p>
-              <div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div>
-            </div>
+            <div class="showcase-image-container"><img src="gercek-analiz-yumru.png" alt="Yumru Hastalık Analizi" class="showcase-img"><div class="scan-line"></div></div>
+            <div class="showcase-details"><h3>🔍 Yumru Sağlık & Gübre</h3><p>Toprak altındaki yumrunun kabuk kalitesini analiz ediyor, hastalık riskini (Rhizoctonia/Uyuz) belirliyoruz.</p><div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div></div>
           </div>
-
           <div class="showcase-card">
-            <div class="showcase-image-container">
-              <img src="gercek-analiz-sulama.png" alt="Sulama Analizi" class="showcase-img">
-              <div class="scan-line"></div>
-            </div>
-            <div class="showcase-details">
-              <h3>💧 Akıllı Sulama Takibi</h3>
-              <p>Çiçeklenme döneminde bitkinin su stresini ve kritik element ihtiyacını anlık tespit ediyoruz.</p>
-              <div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div>
-            </div>
+            <div class="showcase-image-container"><img src="gercek-analiz-sulama.png" alt="Sulama Analizi" class="showcase-img"><div class="scan-line"></div></div>
+            <div class="showcase-details"><h3>💧 Akıllı Sulama Takibi</h3><p>Çiçeklenme döneminde bitkinin su stresini ve kritik element ihtiyacını anlık tespit ediyoruz.</p><div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div></div>
           </div>
-
           <div class="showcase-card">
-            <div class="showcase-image-container">
-              <img src="gercek-analiz-hasat.png" alt="Hasat Analizi" class="showcase-img">
-              <div class="scan-line"></div>
-            </div>
-            <div class="showcase-details">
-              <h3>🚜 Söküme Hazırlık</h3>
-              <p>Sezon sonunda sulama kontrolü ve hasat planlaması için adım adım rehberlik ediyoruz.</p>
-              <div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div>
-            </div>
+            <div class="showcase-image-container"><img src="gercek-analiz-hasat.png" alt="Hasat Analizi" class="showcase-img"><div class="scan-line"></div></div>
+            <div class="showcase-details"><h3>🚜 Söküme Hazırlık</h3><p>Sezon sonunda sulama kontrolü ve hasat planlaması için adım adım rehberlik ediyoruz.</p><div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div></div>
           </div>
-          
-           <div class="showcase-card">
-            <div class="showcase-image-container">
-              <img src="gercek-analiz-tarama.png" alt="Tarama Analizi" class="showcase-img">
-              <div class="scan-line"></div>
-            </div>
-            <div class="showcase-details">
-              <h3>⚡ Geniş Alan Taraması</h3>
-              <p>Geniş arazileri ızgara sistemiyle tarayarak, bitki gelişim geriliği olan bölgeleri erkenden tespit ediyoruz.</p>
-              <div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div>
-            </div>
+          <div class="showcase-card">
+            <div class="showcase-image-container"><img src="gercek-analiz-tarama.png" alt="Tarama Analizi" class="showcase-img"><div class="scan-line"></div></div>
+            <div class="showcase-details"><h3>⚡ Geniş Alan Taraması</h3><p>Geniş arazileri ızgara sistemiyle tarayarak, bitki gelişim geriliği olan bölgeleri erkenden tespit ediyoruz.</p><div class="real-data-note"><span class="pulse-dot"></span> Gerçek Saha Verisidir.</div></div>
           </div>
         </div>
       </div>
@@ -462,12 +348,12 @@
           <p>Biz sadece bir yazılım şirketi değiliz; biz toprağa aşık mühendisleriz.</p>
           <p>Agrovia, tarımsal üretimi belirsizliklerden kurtarmak için kuruldu. Küresel iklim değişikliği ile mücadele ederken, çiftçimizin emeğinin karşılığını tam olarak almasını sağlamak en büyük motivasyonumuz.</p>
           <div style="margin-top: 20px;">
-             <span class="hero-badge" style="margin-right: 10px;">Sürdürülebilir Tarım</span>
-             <span class="hero-badge">Veri Bilimi</span>
+            <span class="hero-badge" style="margin-right: 10px;">Sürdürülebilir Tarım</span>
+            <span class="hero-badge">Veri Bilimi</span>
           </div>
         </div>
         <div class="quote-card">
-          “Geleceğin tarımı, traktörün gücüyle değil, verinin gücüyle yapılacak.”
+          "Geleceğin tarımı, traktörün gücüyle değil, verinin gücüyle yapılacak."
           <br><br>
           <strong style="color: var(--primary);">Agrovia Kurucu Ekibi</strong>
         </div>
@@ -478,17 +364,10 @@
       <div class="container contact-container">
         <h2>Bizimle İletişime Geçin</h2>
         <p>Tarlanızın potansiyelini keşfetmek için ilk adımı atın.</p>
-        
         <form class="contact-form">
-          <label>Ad Soyad</label>
-          <input type="text" placeholder="Adınız">
-          
-          <label>E-posta</label>
-          <input type="email" placeholder="ornek@mail.com">
-          
-          <label>Mesajınız</label>
-          <textarea rows="4" placeholder="Nasıl yardımcı olabiliriz?"></textarea>
-          
+          <label>Ad Soyad</label><input type="text" placeholder="Adınız">
+          <label>E-posta</label><input type="email" placeholder="ornek@mail.com">
+          <label>Mesajınız</label><textarea rows="4" placeholder="Nasıl yardımcı olabiliriz?"></textarea>
           <button type="button" class="btn-primary" style="width: 100%;">Gönder</button>
         </form>
       </div>
@@ -504,6 +383,84 @@
 
   <button class="chat-toggle-btn">💬 Agrovia Asistan</button>
 
+  <!-- CHAT KUTUSU -->
+  <div id="chat-box" style="display:none; position:fixed; bottom:100px; right:30px; width:370px; height:500px; background:#1e293b; border-radius:20px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 20px 60px rgba(0,0,0,0.5); z-index:1000; flex-direction:column; overflow:hidden;">
+    <div style="background:linear-gradient(135deg,#a855f7,#3b82f6); padding:20px; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <div style="color:white; font-weight:700; font-size:1.1rem;">🌱 Agro Asistan</div>
+        <div style="color:rgba(255,255,255,0.7); font-size:0.8rem;">Ziraat Mühendisi AI</div>
+      </div>
+      <button onclick="toggleChat()" style="background:rgba(255,255,255,0.2); border:none; color:white; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:1rem;">✕</button>
+    </div>
+
+    <div id="chat-messages" style="flex:1; overflow-y:auto; padding:20px; display:flex; flex-direction:column; gap:12px;">
+      <div style="background:rgba(168,85,247,0.15); padding:12px 16px; border-radius:12px; color:#e2e8f0; font-size:0.9rem; max-width:85%;">
+        Merhaba! Ben Agro, Agrovia'nın yapay zeka asistanıyım. Size daha iyi yardımcı olabilmem için, hangi bölgede tarım yapıyorsunuz? 🌱
+      </div>
+    </div>
+
+    <div style="padding:15px; border-top:1px solid rgba(255,255,255,0.1); display:flex; gap:10px;">
+      <input id="chat-input" type="text" placeholder="Sorunuzu yazın..." 
+        onkeypress="if(event.key==='Enter') sendMessage()"
+        style="flex:1; padding:10px 15px; border-radius:50px; background:#0f172a; border:1px solid rgba(255,255,255,0.1); color:white; font-family:inherit; font-size:0.9rem; outline:none;">
+      <button onclick="sendMessage()" style="background:#a855f7; border:none; color:white; width:42px; height:42px; border-radius:50%; cursor:pointer; font-size:1.1rem;">➤</button>
+    </div>
+  </div>
+
+  <script>
+    const sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    const API_URL = 'https://agrovia-backend.up.railway.app/ai';
+
+    function toggleChat() {
+      const box = document.getElementById('chat-box');
+      box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    document.querySelector('.chat-toggle-btn').onclick = toggleChat;
+    document.getElementById('open-chat-from-hero').onclick = toggleChat;
+
+    async function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const messages = document.getElementById('chat-messages');
+      const text = input.value.trim();
+      if (!text) return;
+
+      messages.innerHTML += `
+        <div style="background:rgba(168,85,247,0.3); padding:12px 16px; border-radius:12px; color:white; font-size:0.9rem; max-width:85%; align-self:flex-end; margin-left:auto;">
+          ${text}
+        </div>`;
+      input.value = '';
+      messages.scrollTop = messages.scrollHeight;
+
+      const typingId = 'typing_' + Date.now();
+      messages.innerHTML += `
+        <div id="${typingId}" style="background:rgba(255,255,255,0.05); padding:12px 16px; border-radius:12px; color:#94a3b8; font-size:0.9rem; max-width:85%;">
+          ⏳ Yanıt yazılıyor...
+        </div>`;
+      messages.scrollTop = messages.scrollHeight;
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text, sessionId: sessionId })
+        });
+        const data = await res.json();
+        document.getElementById(typingId).remove();
+        messages.innerHTML += `
+          <div style="background:rgba(168,85,247,0.15); padding:12px 16px; border-radius:12px; color:#e2e8f0; font-size:0.9rem; max-width:85%;">
+            ${data.reply}
+          </div>`;
+      } catch (err) {
+        document.getElementById(typingId).remove();
+        messages.innerHTML += `
+          <div style="background:rgba(255,0,0,0.1); padding:12px 16px; border-radius:12px; color:#f87171; font-size:0.9rem; max-width:85%;">
+            Bağlantı hatası. Lütfen tekrar deneyin.
+          </div>`;
+      }
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+
 </body>
 </html>
-
