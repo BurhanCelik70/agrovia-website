@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatInput = document.getElementById("chat-input");
   const chatSendBtn = document.getElementById("chat-send-btn");
   const chatBody = document.getElementById("chat-body");
-
-  const API_URL = "http://localhost:4000/api/analiz";
+  const API_URL = "https://agrovia-backend.up.railway.app/ai";
 
   function addBubble(text, type) {
     const div = document.createElement("div");
@@ -18,11 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message, sessionId: "web-user" }),
       });
-
       const data = await res.json();
-      addBubble(data.advice, "ai");
+      addBubble(data.reply, "ai");
     } catch (err) {
       addBubble("Backend kapalı mı? Bağlanamadım.", "ai");
     }
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function sendMessage() {
     const text = chatInput.value.trim();
     if (!text) return;
-
     addBubble(text, "user");
     chatInput.value = "";
     sendToBackend(text);
