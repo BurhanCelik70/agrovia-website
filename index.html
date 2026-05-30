@@ -498,7 +498,7 @@
               <textarea id="support-message" rows="4" placeholder="Sorununuzu veya talebinizi detaylı açıklayın..."></textarea>
             </div>
 
-            <button class="submit-btn" onclick="sendSupportEmail()">
+            <button class="submit-btn" id="submit-btn" onclick="sendSupportEmail()">
               ✉️ Destek Talebi Gönder
             </button>
 
@@ -558,7 +558,7 @@
     document.querySelector('.chat-toggle-btn').onclick = toggleChat;
     document.getElementById('open-chat-from-hero').onclick = toggleChat;
 
-    function sendSupportEmail() {
+    async function sendSupportEmail() {
       const name = document.getElementById('support-name').value.trim();
       const email = document.getElementById('support-email').value.trim();
       const topic = document.getElementById('support-topic').value;
@@ -569,17 +569,37 @@
         return;
       }
 
-      const subject = encodeURIComponent('Agrovia Destek Talebi - ' + (topic || 'Genel'));
-      const body = encodeURIComponent(
-        'Ad Soyad: ' + name + '\n' +
-        'E-posta: ' + email + '\n' +
-        'Konu: ' + (topic || 'Belirtilmedi') + '\n\n' +
-        'Mesaj:\n' + message
-      );
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = '⏳ Gönderiliyor...';
+      btn.disabled = true;
 
-      window.location.href = 'mailto:celikburhan56@gmail.com?subject=' + subject + '&body=' + body;
+      try {
+        const res = await fetch('https://formspree.io/f/xpqnnnel', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            topic: topic || 'Belirtilmedi',
+            message: message
+          })
+        });
 
-      document.getElementById('success-msg').style.display = 'block';
+        if (res.ok) {
+          document.getElementById('success-msg').style.display = 'block';
+          document.getElementById('support-name').value = '';
+          document.getElementById('support-email').value = '';
+          document.getElementById('support-topic').value = '';
+          document.getElementById('support-message').value = '';
+          btn.textContent = '✅ Gönderildi';
+        } else {
+          throw new Error('Hata');
+        }
+      } catch (err) {
+        alert('Gönderim başarısız. Lütfen tekrar deneyin veya celikburhan56@gmail.com adresine mail atın.');
+        btn.textContent = '✉️ Destek Talebi Gönder';
+        btn.disabled = false;
+      }
     }
 
     async function sendMessage() {
