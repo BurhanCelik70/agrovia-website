@@ -210,23 +210,83 @@
       padding: 30px; border-radius: 0 16px 16px 0; color: white; font-style: italic; font-size: 1.1rem;
     }
 
-    .contact-container { max-width: 600px; margin: 0 auto; text-align: center; }
-    .contact-form {
-      background: var(--bg-card); padding: 40px; border-radius: 20px;
-      border: var(--border); margin-top: 30px; text-align: left;
+    /* DESTEK BÖLÜMÜ */
+    .support-section { padding: 80px 0; background: var(--bg-darker); }
+    .support-section h2 { font-size: 2.5rem; text-align: center; margin-bottom: 10px; color: white; }
+    .support-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 50px; font-size: 1rem; }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
     }
-    .contact-form label { display: block; color: white; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 12px; border-radius: 8px;
+
+    .support-info h3 {
+      color: white; font-size: 1.4rem; margin-bottom: 20px;
+    }
+
+    .support-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: var(--bg-card); border: var(--border);
+      border-radius: 16px; padding: 20px; margin-bottom: 16px;
+      transition: 0.3s;
+    }
+    .support-item:hover { border-color: var(--primary); }
+    .support-item-icon {
+      font-size: 1.5rem; min-width: 40px; text-align: center;
+      background: rgba(168,85,247,0.1); width: 48px; height: 48px;
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    }
+    .support-item-text h4 { color: white; font-size: 1rem; margin-bottom: 4px; }
+    .support-item-text p { color: var(--text-muted); font-size: 0.88rem; }
+    .support-item-text a {
+      color: var(--primary); text-decoration: none; font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .support-item-text a:hover { text-decoration: underline; }
+
+    .support-form-container {
+      background: var(--bg-card); border: var(--border);
+      border-radius: 20px; padding: 35px;
+    }
+    .support-form-container h3 { color: white; font-size: 1.2rem; margin-bottom: 6px; }
+    .support-form-container p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 25px; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; color: #cbd5e1; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px; border-radius: 10px;
       background: var(--bg-dark); border: var(--border);
-      color: white; margin-bottom: 20px; font-family: inherit;
+      color: white; font-family: inherit; font-size: 0.9rem; outline: none;
+      transition: 0.2s;
     }
-    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(168,85,247,0.15);
+    }
+    .form-group select option { background: var(--bg-dark); }
+
+    .submit-btn {
+      width: 100%; padding: 14px; border-radius: 12px;
+      background: var(--primary); color: white; border: none;
+      font-weight: 700; font-size: 1rem; cursor: pointer;
+      transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .submit-btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
+
+    .success-msg {
+      display: none; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 12px; padding: 16px; color: var(--accent);
+      text-align: center; font-weight: 600; margin-top: 15px;
+    }
 
     footer {
-      background: var(--bg-darker); padding: 40px 0; border-top: var(--border); margin-top: 50px;
+      background: var(--bg-darker); padding: 40px 0; border-top: var(--border); margin-top: 0;
     }
     .footer-content { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.9rem; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; margin-left: 20px; transition: 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
 
     .chat-toggle-btn {
       position: fixed; bottom: 30px; right: 30px; z-index: 999;
@@ -242,6 +302,7 @@
       h1 { font-size: 2.5rem; }
       .about-grid { grid-template-columns: 1fr; }
       .hero-metrics { flex-direction: column; width: 100%; padding: 0 30px; }
+      .support-grid { grid-template-columns: 1fr; }
     }
     
     @keyframes fadeInUp {
@@ -264,8 +325,9 @@
         <a href="#features">Çözümler</a>
         <a href="#real-time-showcase">Teknoloji</a>
         <a href="#about">Biz Kimiz?</a>
+        <a href="#support">Destek</a>
       </nav>
-      <a href="#contact" class="btn-nav">Demoyu Başlat</a>
+      <a href="#support" class="btn-nav">Destek Al</a>
     </div>
   </header>
 
@@ -281,7 +343,7 @@
           çiftçiler neden edemesin? Agrovia sayesinde tarlanızı teknolojiyle buluşturun ve çağa ayak uydurun.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Ücretsiz Analiz Başlat</a>
+          <a href="#support" class="btn-primary">Ücretsiz Analiz Başlat</a>
           <button class="btn-ghost" id="open-chat-from-hero">Asistanı Dene ➜</button>
         </div>
         <div class="hero-metrics">
@@ -360,30 +422,109 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container contact-container">
-        <h2>Bizimle İletişime Geçin</h2>
-        <p>Tarlanızın potansiyelini keşfetmek için ilk adımı atın.</p>
-        <form class="contact-form">
-          <label>Ad Soyad</label><input type="text" placeholder="Adınız">
-          <label>E-posta</label><input type="email" placeholder="ornek@mail.com">
-          <label>Mesajınız</label><textarea rows="4" placeholder="Nasıl yardımcı olabiliriz?"></textarea>
-          <button type="button" class="btn-primary" style="width: 100%;">Gönder</button>
-        </form>
+    <!-- DESTEK BÖLÜMÜ -->
+    <section id="support" class="support-section">
+      <div class="container">
+        <h2>Destek Merkezi</h2>
+        <p class="support-subtitle">Size yardımcı olmak için buradayız. Sorularınız için bize ulaşın.</p>
+
+        <div class="support-grid">
+          <!-- Sol: İletişim Bilgileri -->
+          <div class="support-info">
+            <h3>Bize Ulaşın</h3>
+
+            <div class="support-item">
+              <div class="support-item-icon">✉️</div>
+              <div class="support-item-text">
+                <h4>E-posta Desteği</h4>
+                <p>Her türlü soru ve sorununuz için bize e-posta gönderin. En kısa sürede yanıt veririz.</p>
+                <a href="mailto:celikburhan56@gmail.com">celikburhan56@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="support-item">
+              <div class="support-item-icon">📱</div>
+              <div class="support-item-text">
+                <h4>Uygulama Desteği</h4>
+                <p>Mobil uygulama ile ilgili sorunlar, hesap işlemleri ve teknik destek için.</p>
+                <a href="mailto:celikburhan56@gmail.com">Destek Talebi Oluştur</a>
+              </div>
+            </div>
+
+            <div class="support-item">
+              <div class="support-item-icon">⏱️</div>
+              <div class="support-item-text">
+                <h4>Yanıt Süresi</h4>
+                <p>Mesajlarınızı genellikle <strong style="color: var(--accent);">24 saat</strong> içinde yanıtlıyoruz.</p>
+              </div>
+            </div>
+
+            <div class="support-item">
+              <div class="support-item-icon">🔒</div>
+              <div class="support-item-text">
+                <h4>Gizlilik Politikası</h4>
+                <p>Verilerinizin nasıl korunduğunu öğrenmek için:</p>
+                <a href="https://sites.google.com/view/agroviaprivacypolicy" target="_blank">Gizlilik Politikası →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sağ: İletişim Formu -->
+          <div class="support-form-container">
+            <h3>📨 Destek Talebi Gönder</h3>
+            <p>Formu doldurun, ekibimiz en kısa sürede size dönüş yapacak.</p>
+
+            <div class="form-group">
+              <label>Ad Soyad</label>
+              <input type="text" id="support-name" placeholder="Adınız Soyadınız">
+            </div>
+            <div class="form-group">
+              <label>E-posta Adresiniz</label>
+              <input type="email" id="support-email" placeholder="ornek@mail.com">
+            </div>
+            <div class="form-group">
+              <label>Konu</label>
+              <select id="support-topic">
+                <option value="">Konu seçin...</option>
+                <option value="hesap">Hesap İşlemleri</option>
+                <option value="teknik">Teknik Sorun</option>
+                <option value="silme">Hesap Silme Talebi</option>
+                <option value="öneri">Öneri / Geri Bildirim</option>
+                <option value="diger">Diğer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mesajınız</label>
+              <textarea id="support-message" rows="4" placeholder="Sorununuzu veya talebinizi detaylı açıklayın..."></textarea>
+            </div>
+
+            <button class="submit-btn" onclick="sendSupportEmail()">
+              ✉️ Destek Talebi Gönder
+            </button>
+
+            <div class="success-msg" id="success-msg">
+              ✅ Talebiniz alındı! En kısa sürede <strong>celikburhan56@gmail.com</strong> adresinden size dönüş yapacağız.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-content">
-      <div style="font-weight: bold; color: white;">Agrovia Inc.</div>
-      <div>© 2025 Tüm Hakları Saklıdır.</div>
+      <div style="font-weight: bold; color: white;">Agrovia</div>
+      <div>© 2026 Tüm Hakları Saklıdır.</div>
+      <div class="footer-links">
+        <a href="#support">Destek</a>
+        <a href="https://sites.google.com/view/agroviaprivacypolicy" target="_blank">Gizlilik Politikası</a>
+        <a href="mailto:celikburhan56@gmail.com">İletişim</a>
+      </div>
     </div>
   </footer>
 
   <button class="chat-toggle-btn">💬 Agrovia Asistan</button>
 
-  <!-- CHAT KUTUSU -->
   <div id="chat-box" style="display:none; position:fixed; bottom:100px; right:30px; width:370px; height:500px; background:#1e293b; border-radius:20px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 20px 60px rgba(0,0,0,0.5); z-index:1000; flex-direction:column; overflow:hidden;">
     <div style="background:linear-gradient(135deg,#a855f7,#3b82f6); padding:20px; display:flex; justify-content:space-between; align-items:center;">
       <div>
@@ -392,13 +533,11 @@
       </div>
       <button onclick="toggleChat()" style="background:rgba(255,255,255,0.2); border:none; color:white; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:1rem;">✕</button>
     </div>
-
     <div id="chat-messages" style="flex:1; overflow-y:auto; padding:20px; display:flex; flex-direction:column; gap:12px;">
       <div style="background:rgba(168,85,247,0.15); padding:12px 16px; border-radius:12px; color:#e2e8f0; font-size:0.9rem; max-width:85%;">
         Merhaba! Ben Agro, Agrovia'nın yapay zeka asistanıyım. Size daha iyi yardımcı olabilmem için, hangi bölgede tarım yapıyorsunuz? 🌱
       </div>
     </div>
-
     <div style="padding:15px; border-top:1px solid rgba(255,255,255,0.1); display:flex; gap:10px;">
       <input id="chat-input" type="text" placeholder="Sorunuzu yazın..." 
         onkeypress="if(event.key==='Enter') sendMessage()"
@@ -419,24 +558,42 @@
     document.querySelector('.chat-toggle-btn').onclick = toggleChat;
     document.getElementById('open-chat-from-hero').onclick = toggleChat;
 
+    function sendSupportEmail() {
+      const name = document.getElementById('support-name').value.trim();
+      const email = document.getElementById('support-email').value.trim();
+      const topic = document.getElementById('support-topic').value;
+      const message = document.getElementById('support-message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Lütfen ad, e-posta ve mesaj alanlarını doldurun.');
+        return;
+      }
+
+      const subject = encodeURIComponent('Agrovia Destek Talebi - ' + (topic || 'Genel'));
+      const body = encodeURIComponent(
+        'Ad Soyad: ' + name + '\n' +
+        'E-posta: ' + email + '\n' +
+        'Konu: ' + (topic || 'Belirtilmedi') + '\n\n' +
+        'Mesaj:\n' + message
+      );
+
+      window.location.href = 'mailto:celikburhan56@gmail.com?subject=' + subject + '&body=' + body;
+
+      document.getElementById('success-msg').style.display = 'block';
+    }
+
     async function sendMessage() {
       const input = document.getElementById('chat-input');
       const messages = document.getElementById('chat-messages');
       const text = input.value.trim();
       if (!text) return;
 
-      messages.innerHTML += `
-        <div style="background:rgba(168,85,247,0.3); padding:12px 16px; border-radius:12px; color:white; font-size:0.9rem; max-width:85%; align-self:flex-end; margin-left:auto;">
-          ${text}
-        </div>`;
+      messages.innerHTML += `<div style="background:rgba(168,85,247,0.3); padding:12px 16px; border-radius:12px; color:white; font-size:0.9rem; max-width:85%; align-self:flex-end; margin-left:auto;">${text}</div>`;
       input.value = '';
       messages.scrollTop = messages.scrollHeight;
 
       const typingId = 'typing_' + Date.now();
-      messages.innerHTML += `
-        <div id="${typingId}" style="background:rgba(255,255,255,0.05); padding:12px 16px; border-radius:12px; color:#94a3b8; font-size:0.9rem; max-width:85%;">
-          ⏳ Yanıt yazılıyor...
-        </div>`;
+      messages.innerHTML += `<div id="${typingId}" style="background:rgba(255,255,255,0.05); padding:12px 16px; border-radius:12px; color:#94a3b8; font-size:0.9rem; max-width:85%;">⏳ Yanıt yazılıyor...</div>`;
       messages.scrollTop = messages.scrollHeight;
 
       try {
@@ -447,16 +604,10 @@
         });
         const data = await res.json();
         document.getElementById(typingId).remove();
-        messages.innerHTML += `
-          <div style="background:rgba(168,85,247,0.15); padding:12px 16px; border-radius:12px; color:#e2e8f0; font-size:0.9rem; max-width:85%;">
-            ${data.reply}
-          </div>`;
+        messages.innerHTML += `<div style="background:rgba(168,85,247,0.15); padding:12px 16px; border-radius:12px; color:#e2e8f0; font-size:0.9rem; max-width:85%;">${data.reply}</div>`;
       } catch (err) {
         document.getElementById(typingId).remove();
-        messages.innerHTML += `
-          <div style="background:rgba(255,0,0,0.1); padding:12px 16px; border-radius:12px; color:#f87171; font-size:0.9rem; max-width:85%;">
-            Bağlantı hatası. Lütfen tekrar deneyin.
-          </div>`;
+        messages.innerHTML += `<div style="background:rgba(255,0,0,0.1); padding:12px 16px; border-radius:12px; color:#f87171; font-size:0.9rem; max-width:85%;">Bağlantı hatası. Lütfen tekrar deneyin.</div>`;
       }
       messages.scrollTop = messages.scrollHeight;
     }
